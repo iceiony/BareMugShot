@@ -55,6 +55,7 @@
     <Compile Include="Eventing\IEvent.cs" />
     <Compile Include="Eventing\IHandles.cs" />
     <Compile Include="Formatting\ISqlFormatter.cs" />
+    <Compile Include="LogProcessing\ExceptionLogDetailsProcessor.cs" />
     <Compile Include="LogProcessing\ILogDetailsProcessor.cs" />
     <Compile Include="LogProcessing\ILogDetailsProcessorProvider.cs" />
     <Compile Include="LogProcessing\SessionOpenLogDetailsProcessor.cs" />

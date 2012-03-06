@@ -54,6 +54,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogProcessing\ExceptionLogDetailsProcessorTests.cs" />
     <Compile Include="LogProcessing\SessionOpenLogDetailsProcessorTests.cs" />
     <Compile Include="LogProcessing\SqlLogDetailsProcessorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

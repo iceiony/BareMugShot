@@ -10,17 +10,17 @@ using NHibernate.ZMQLogPublisher;
 
 namespace BearMugShot.Core.Tests.LogProcessing
 {
-    public class When_log_details_with_session_opens_are_processed : WithSubject<SessionOpenLogDetailsProcessor>
+    public class When_log_details_with_exception_information : WithSubject<ExceptionLogDetailsProcessor>
     {
-        private static SessionOpened _sessionOpened;
+        private static ExceptionOccured _sqlExecuted;
 
         private Establish context = () =>
                                         {
-                                            EventDispatcher.Register<SessionOpened>((e) => _sessionOpened = e);
+                                            EventDispatcher.Register<ExceptionOccured>((e) => _sqlExecuted = e);
                                         };
 
         private Because of = () => Subject.ProcessLogDetails(new LogDetails());
 
-        private It should_start_listening_the_queue = () => _sessionOpened.ShouldNotBeNull();
+        private It should_start_listening_the_queue = () => _sqlExecuted.ShouldNotBeNull();
     }
 }
